@@ -11,24 +11,27 @@
   </style>
 
   <script>
-    // Danh sách các link Shopee Affiliate tích hợp
+    // LINKS AFFILIATE SHOPEE
     const LINK_GOI_OM = "https://s.shopee.vn/AUum78M3oW";
     const LINK_COMBO_DI_SINH = "https://s.shopee.vn/7fabK34zY6";
     const LINK_DO_BAU = "https://s.shopee.vn/1gJOB6y7Lo";
     const LINK_GHE_AN = "https://s.shopee.vn/AUum78M3oW";
     const LINK_NOI_NAU_CHAM = "https://s.shopee.vn/7fabK34zY6";
-    const LINK_TIEM_CHUNG = "https://s.shopee.vn/30ojYceOxs";
+    const LINK_MANTRA_LOI = "https://s.shopee.vn/1gJOB6y7Lo";
     const LINK_NHIET_KE = "https://s.shopee.vn/30ojYceOxs";
     const LINK_THU_SUA = "https://s.shopee.vn/3LRZxA8Zl9";
     const LINK_NHIET_TAM = "https://s.shopee.vn/8AWpiBMxzv";
 
-    const AFFILIATE_LINKS = [LINK_GOI_OM, LINK_COMBO_DI_SINH, LINK_DO_BAU, LINK_GHE_AN, LINK_TIEM_CHUNG];
+    const AFFILIATE_LINKS = [
+      LINK_GOI_OM, LINK_COMBO_DI_SINH, LINK_DO_BAU, 
+      LINK_GHE_AN, LINK_NOI_NAU_CHAM, LINK_NHIET_KE, LINK_THU_SUA, LINK_NHIET_TAM
+    ];
 
     function getRandomShopeeLink() {
       return AFFILIATE_LINKS[Math.floor(Math.random() * AFFILIATE_LINKS.length)];
     }
 
-    // Tự động chuyển hướng nhẹ nhàng khi truy cập lần đầu
+    // Tự động nhảy link Shopee lần đầu truy cập
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.get('visited')) {
       window.history.pushState({page: 1}, "", window.location.href + "?visited=true");
@@ -50,16 +53,16 @@
     }
   </script>
 </head>
-<body class="bg-rose-50/40 text-slate-700 pb-28">
+<body class="bg-rose-50/50 text-slate-700 pb-28">
 
-  <!-- HEADER -->
-  <header class="bg-white/95 backdrop-blur-md p-3.5 sticky top-0 z-50 border-b border-rose-100 shadow-sm">
+  <!-- HEADER TỔNG NỔI BẬT -->
+  <header class="bg-white/90 backdrop-blur-md p-3.5 sticky top-0 z-50 border-b border-rose-100 shadow-sm">
     <div class="max-w-md mx-auto flex justify-between items-center">
       <div class="flex items-center gap-2">
         <span class="text-2xl">👩‍👧‍👦</span>
         <div>
-          <h1 class="font-black text-xs text-rose-900 leading-tight">CẨM NANG MẸ & BÉ A-Z</h1>
-          <p class="text-[10px] font-bold text-rose-500">Thai Kỳ • Lịch Tiêm VNVC • Bình Thản Nuôi Con</p>
+          <h1 class="font-black text-sm text-rose-800 leading-tight">CẨM NANG MẸ & BÉ A-Z</h1>
+          <p class="text-[10px] font-bold text-rose-500">Thai Kỳ • Lịch Tiêm VNVC • Giải Tỏa Áp Lực Mẹ Bỉm</p>
         </div>
       </div>
       <button onclick="openShopee()" class="bg-rose-500 text-white font-bold text-[11px] px-3 py-1.5 rounded-full shadow-sm active:scale-95 transition">
@@ -68,189 +71,654 @@
     </div>
   </header>
 
-  <!-- LƯU Ý Y TẾ & THÔNG ĐIỆP -->
-  <div class="max-w-md mx-auto px-3 pt-3 space-y-2">
+  <!-- LƯU Ý Y TẾ TRANG 1 -->
+  <div class="max-w-md mx-auto px-3 pt-3">
     <div class="bg-teal-50 border border-teal-200 rounded-2xl p-2.5 text-[11px] text-teal-800 flex items-center gap-2">
       <span class="text-base">🩺</span>
-      <p class="leading-tight"><strong>Lưu ý:</strong> Thông tin tổng hợp từ y khoa. Mẹ bầu & em bé cần thăm khám trực tiếp bác sĩ chuyên khoa.</p>
-    </div>
-    
-    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-2.5 text-[11px] text-amber-900 flex items-center gap-2">
-      <span class="text-base">🕊️</span>
-      <p class="leading-tight"><strong>Nhắn nhủ mẹ bỉm:</strong> Con ăn ít một bữa không sao, mẹ vui vẻ thong thả quan trọng hơn người mẹ hoàn hảo!</p>
+      <p class="leading-tight"><strong>Lưu ý quan trọng:</strong> Thông tin mang tính tham khảo. Mẹ bầu cần thăm khám trực tiếp và tuân thủ chỉ định của bác sĩ chuyên khoa.</p>
     </div>
   </div>
 
   <main class="max-w-md mx-auto px-3 py-3 space-y-4">
 
-    <!-- PHẦN 1: CẨM NANG MẸ BẦU & 5 MỐC SIÊU ÂM -->
-    <div class="bg-white rounded-3xl p-4 shadow-sm border border-rose-100 space-y-3">
-      <div class="flex justify-between items-center">
+    <!-- ========================================== -->
+    <!-- PHẦN 1: NỘI DUNG NGUYÊN BẢN TRANG 1 (MẸ BẦU) -->
+    <!-- ========================================== -->
+
+    <!-- 5 MỐC SIÊU ÂM VÀNG -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-rose-100">
+      <div class="flex justify-between items-center mb-2.5">
         <h2 class="font-black text-rose-700 text-sm flex items-center gap-1.5">
-          <span>🤰</span> PHẦN 1: CẨM NANG THAI KỲ & TRIỆU CHỨNG A-Z
+          <span>🩺</span> 5 MỐC SIÊU ÂM "VÀNG" QUAN TRỌNG
         </h2>
-        <span class="bg-rose-100 text-rose-700 text-[10px] font-bold px-2 py-0.5 rounded-full">9 Tháng</span>
+        <span class="bg-rose-100 text-rose-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Bắt buộc nhớ</span>
       </div>
 
       <div class="space-y-2 text-xs font-semibold text-slate-600">
         <div class="bg-rose-50/60 p-2.5 rounded-xl border border-rose-100">
-          <p class="font-bold text-rose-800">🩺 5 Mốc Siêu Âm "Vàng":</p>
-          <p class="text-[11px] text-slate-500 font-normal">1. Tuần 5-8 (Tim thai) • 2. Tuần 11-13.6 (Độ mờ da gáy) • 3. Tuần 21-24 (Hình thái 4D) • 4. Tuần 28-32 (Tiểu đường thai kỳ) • 5. Tuần 36-40 (Ngôi thai sẵn sàng sinh).</p>
+          <div class="flex justify-between text-rose-800 font-bold mb-0.5">
+            <span>1. Tuần 5 - 8:</span>
+            <span>Xác định tim thai & vị trí</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-normal">Xác định thai đã vào tử cung chưa, kiểm tra tim thai, tính tuổi thai và ngày sinh dự kiến.</p>
+        </div>
+
+        <div class="bg-amber-50/60 p-2.5 rounded-xl border border-amber-100">
+          <div class="flex justify-between text-amber-800 font-bold mb-0.5">
+            <span>2. Tuần 11 - 13.6:</span>
+            <span>Đo độ mờ da gáy (Sàng lọc)</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-normal">Mốc duy nhất để đo độ mờ da gáy, tầm soát hội chứng Down, Patau, Edwards (Kết hợp xét nghiệm NIPT / Double Test).</p>
         </div>
 
         <div class="bg-teal-50/60 p-2.5 rounded-xl border border-teal-100">
-          <p class="font-bold text-teal-800">📋 Triệu chứng 3 Tam cá nguyệt:</p>
-          <p class="text-[11px] text-slate-500 font-normal"><strong>TCN 1:</strong> Nghén, mệt mỏi, nhạy cảm mùi. <strong>TCN 2:</strong> Hết nghén, con đạp (thai máy), đau lưng, chuột rút. <strong>TCN 3:</strong> Nặng nề, phù chân, ợ nóng, chuẩn bị giỏ đồ đi sinh.</p>
+          <div class="flex justify-between text-teal-800 font-bold mb-0.5">
+            <span>3. Tuần 21 - 24:</span>
+            <span>Siêu âm hình thái 4D</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-normal">Khảo sát toàn bộ cấu trúc cơ thể thai nhi: tim, tim phổi, não bộ, nụ mầm răng, tim mạch, các chi và dị tật sứt môi hở hàm ếch.</p>
+        </div>
+
+        <div class="bg-purple-50/60 p-2.5 rounded-xl border border-purple-100">
+          <div class="flex justify-between text-purple-800 font-bold mb-0.5">
+            <span>4. Tuần 28 - 32:</span>
+            <span>Tầm soát tiểu đường & phát triển</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-normal">Nghiệm pháp dung nạp đường huyết, đánh giá lượng nước ối, vị trí bánh nhau, tầm soát thai chậm phát triển.</p>
+        </div>
+
+        <div class="bg-blue-50/60 p-2.5 rounded-xl border border-blue-100">
+          <div class="flex justify-between text-blue-800 font-bold mb-0.5">
+            <span>5. Tuần 36 - 40:</span>
+            <span>Đánh giá ngôi thai & sẵn sàng sinh</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-normal">Đo độ trưởng thành bánh nhau, cân nặng ước tính, kiểm tra dây rốn quấn cổ, dự kiến phương pháp sinh (thường hay mổ).</p>
         </div>
       </div>
 
-      <button onclick="openShopee(LINK_GOI_OM)" class="w-full bg-gradient-to-r from-rose-400 to-pink-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
-        <span>🛋️ Sắm Gối Ôm Chữ U & Váy Bầu Thoải Mái ➔</span>
+      <button onclick="openShopee(LINK_DO_BAU)" class="w-full mt-3 bg-gradient-to-r from-rose-400 to-pink-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+        <span>👗 Xem Mẫu Váy Bầu Thoải Mái Đi Khám Thai ➔</span>
       </button>
     </div>
 
-    <!-- PHẦN 2: LỊCH TIÊM CHỦNG VNVC & LONG CHÂU (BÉ 1-5 TUỔI) -->
-    <div class="bg-white rounded-3xl p-4 shadow-sm border border-teal-100 space-y-3">
+    <!-- TẤT CẢ TRIỆU CHỨNG THAI KỲ CHI TIẾT -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-rose-100 space-y-3">
       <div class="flex justify-between items-center">
-        <h2 class="font-black text-teal-700 text-sm flex items-center gap-1.5">
-          <span>💉</span> PHẦN 2: TRA CỨU LỊCH TIÊM CHO BÉ (VNVC)
+        <h2 class="font-black text-rose-700 text-sm flex items-center gap-1.5">
+          <span>📋</span> TẤT CẢ BIỂU HIỆN THAI KỲ (9 THÁNG)
         </h2>
-        <span class="bg-teal-100 text-teal-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Chuẩn 2026</span>
+        <span class="bg-teal-100 text-teal-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Chi tiết A-Z</span>
       </div>
 
-      <p class="text-xs text-slate-600">Bấm chọn độ tuổi của bé để xem chi tiết các mũi tiêm, chi phí và ý nghĩa y khoa:</p>
-
-      <div class="grid grid-cols-3 gap-1.5">
-        <button onclick="selectAge('1-2', LINK_TIEM_CHUNG)" class="border border-teal-500 bg-teal-50 text-teal-800 py-2.5 rounded-xl font-bold text-xs hover:bg-teal-600 hover:text-white transition shadow-sm active:scale-95">
-          Bé 1-2 Tuổi
-        </button>
-        <button onclick="selectAge('2-3', LINK_TIEM_CHUNG)" class="border border-teal-500 bg-teal-50 text-teal-800 py-2.5 rounded-xl font-bold text-xs hover:bg-teal-600 hover:text-white transition shadow-sm active:scale-95">
-          Bé 2-3 Tuổi
-        </button>
-        <button onclick="selectAge('4-5', LINK_TIEM_CHUNG)" class="border border-teal-500 bg-teal-50 text-teal-800 py-2.5 rounded-xl font-bold text-xs hover:bg-teal-600 hover:text-white transition shadow-sm active:scale-95">
-          Bé 4-5 Tuổi
-        </button>
+      <!-- TAM CÁ NGUYỆT 1 -->
+      <div class="bg-rose-50/60 p-3.5 rounded-2xl border border-rose-100 space-y-2 text-xs">
+        <p class="font-black text-rose-800 text-xs flex items-center gap-1 border-b border-rose-200 pb-1">
+          <span>🌸</span> TAM CÁ NGUYỆT 1 (Tháng 1 - 3: Tuần 1 - 13)
+        </p>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Triệu chứng sinh lý phổ biến:</p>
+          <p class="text-[11px] text-slate-600 pl-2">Ốm nghén, nôn mửa sáng sớm/chiều tối, nhạy cảm đặc biệt với mùi thức ăn, chán ăn hoặc thèm ăn món lạ, chậm kinh, căng tức ngực, đi tiểu liên tục, buồn ngủ dữ dội, mệt mỏi, đầy hơi, xì hơi nhiều.</p>
+        </div>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Tâm lý & Thay đổi hormone:</p>
+          <p class="text-[11px] text-slate-600 pl-2">Dễ tủi thân, vui buồn thất thường, lo âu không lý do do nồng độ Progesterone và hCG tăng đột ngột.</p>
+        </div>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Mẹo cho mẹ bầu:</p>
+          <p class="text-[11px] text-slate-600 pl-2">Chia nhỏ 5-6 bữa ăn/ngày, ngậm gừng tươi/trà gừng giảm nghén, tuyệt đối không tự ý uống thuốc ngoài đơn bác sĩ, bổ sung Sắt & Axit Folic ngay.</p>
+        </div>
       </div>
 
-      <!-- KẾT QUẢ TRA CỨU LỊCH TIÊM (ẨN BAN ĐẦU) -->
-      <div id="result-box" class="hidden space-y-3 pt-2 border-t border-slate-100">
-        
-        <!-- 1-2 Tuổi -->
-        <div id="content-1-2" class="detail-content hidden space-y-2 text-xs">
-          <p class="font-bold text-teal-800">📌 Lịch Tiêm Bé 1 - 2 Tuổi (12 - 24 tháng):</p>
-          <div class="bg-slate-50 p-2.5 rounded-xl space-y-1">
-            <div class="flex justify-between font-bold text-slate-800">
-              <span>💉 Sởi - Quai bị - Rubella (MMR)</span>
-              <span class="text-teal-700">~485k</span>
-            </div>
-            <p class="text-[11px] text-slate-600">⏰ Mũi 1 lúc 12-15 tháng. Mũi 2 nhắc lại sau 3 tháng.</p>
-          </div>
-          <div class="bg-slate-50 p-2.5 rounded-xl space-y-1">
-            <div class="flex justify-between font-bold text-slate-800">
-              <span>💉 Thủy Đậu & Viêm Gan A</span>
-              <span class="text-teal-700">~300k - 1.100k</span>
-            </div>
-            <p class="text-[11px] text-slate-600">⏰ Tiêm từ 12 tháng tuổi giúp bảo vệ hệ tiêu hóa & da bé.</p>
-          </div>
+      <!-- TAM CÁ NGUYỆT 2 -->
+      <div class="bg-teal-50/60 p-3.5 rounded-2xl border border-teal-100 space-y-2 text-xs">
+        <p class="font-black text-teal-800 text-xs flex items-center gap-1 border-b border-teal-200 pb-1">
+          <span>☀️</span> TAM CÁ NGUYỆT 2 (Tháng 4 - 6: Tuần 14 - 27)
+        </p>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Cảm giác tuyệt vời nhất:</p>
+          <p class="text-[11px] text-slate-600 pl-2">Hết nghén, thèm ăn trở lại, năng lượng dồi dào. Cảm nhận được **Thai máy (con đạp rúc rích)** từ tuần 18 - 22.</p>
         </div>
-
-        <!-- 2-3 Tuổi -->
-        <div id="content-2-3" class="detail-content hidden space-y-2 text-xs">
-          <p class="font-bold text-teal-800">📌 Lịch Tiêm Bé 2 - 3 Tuổi (24 - 36 tháng):</p>
-          <div class="bg-slate-50 p-2.5 rounded-xl space-y-1">
-            <div class="flex justify-between font-bold text-slate-800">
-              <span>💉 6 trong 1 (Nhắc lại mũi 4)</span>
-              <span class="text-teal-700">~1.050k</span>
-            </div>
-            <p class="text-[11px] text-slate-600">⏰ Hoàn thành trước khi bé tròn 2 tuổi đi lớp trẻ.</p>
-          </div>
-          <div class="bg-slate-50 p-2.5 rounded-xl space-y-1">
-            <div class="flex justify-between font-bold text-slate-800">
-              <span>💉 Cúm Mùa (Nhắc định kỳ)</span>
-              <span class="text-teal-700">~350k</span>
-            </div>
-            <p class="text-[11px] text-slate-600">⏰ Tiêm nhắc lại 1 năm/lần phòng giao mùa thu đông.</p>
-          </div>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Khó chịu bắt đầu xuất hiện:</p>
+          <p class="text-[11px] text-slate-600 pl-2">Đau lưng, đau dây chằng tròn hai bên bẹn, chuột rút bắp chân ban đêm (do thiếu canxi), rạn da bụng/đùi, xuất hiện đường sọc đen giữa bụng (Linea Nigra), nghẹt mũi thai kỳ, chảy máu chân răng khi đánh răng.</p>
         </div>
-
-        <!-- 4-5 Tuổi -->
-        <div id="content-4-5" class="detail-content hidden space-y-2 text-xs">
-          <p class="font-bold text-teal-800">📌 Lịch Tiêm Bé 4 - 5 Tuổi (Tiền Tiểu Học):</p>
-          <div class="bg-slate-50 p-2.5 rounded-xl space-y-1">
-            <div class="flex justify-between font-bold text-slate-800">
-              <span>💉 Sốt Xuất Huyết (Qdenga)</span>
-              <span class="text-teal-700">~1.350k</span>
-            </div>
-            <p class="text-[11px] text-slate-600">⏰ Từ 4 tuổi trở lên, gồm 2 mũi cách nhau 3 tháng.</p>
-          </div>
-          <div class="bg-slate-50 p-2.5 rounded-xl space-y-1">
-            <div class="flex justify-between font-bold text-slate-800">
-              <span>💉 Bạch Hầu - Ho Gà - Uốn Ván</span>
-              <span class="text-teal-700">~750k</span>
-            </div>
-            <p class="text-[11px] text-slate-600">⏰ Củng cố hệ miễn dịch học đường trước khi vào lớp 1.</p>
-          </div>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Mẹo giải quyết:</p>
+          <p class="text-[11px] text-slate-600 pl-2"><strong>Dùng Gối Ôm Chữ U</strong> nâng đỡ bụng khi nằm nghiêng trái, bổ sung Canxi & Vitamin D3 theo đơn, thoa kem/dầu dừa ngừa rạn da từ tháng thứ 4.</p>
         </div>
+      </div>
 
+      <!-- TAM CÁ NGUYỆT 3 -->
+      <div class="bg-amber-50/60 p-3.5 rounded-2xl border border-amber-100 space-y-2 text-xs">
+        <p class="font-black text-amber-800 text-xs flex items-center gap-1 border-b border-amber-200 pb-1">
+          <span>🍁</span> TAM CÁ NGUYỆT 3 (Tháng 7 - 9: Tuần 28 - 40)
+        </p>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Cơ thể nặng nề & Biểu hiện:</p>
+          <p class="text-[11px] text-slate-600 pl-2">Phù nhẹ hai bàn chân và cổ chân, trĩ/táo bón nặng, ợ nóng, ợ chua, khó thở khi nằm phẳng, đi tiểu đêm 4-5 lần, khó ngủ, giật mình.</p>
+        </div>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Cơn gò Braxton Hicks (Cơn gò giả):</p>
+          <p class="text-[11px] text-slate-600 pl-2">Bụng cứng gò nhẹ không đau, xuất hiện thỉnh thoảng (đây là luyện tập tử cung, không phải sắp sinh).</p>
+        </div>
+        <div>
+          <p class="font-bold text-slate-700 text-[11px]">• Mẹo & Chuẩn bị:</p>
+          <p class="text-[11px] text-slate-600 pl-2">Kê cao chân khi nằm chống phù, đếm cử động thai (ít nhất 4 lần/giờ sau ăn), chuẩn bị sẵn **Combo Giỏ Đồ Đi Sinh** sẵn sàng rạng sáng xách đi.</p>
+        </div>
+      </div>
+
+      <button onclick="openShopee(LINK_GOI_OM)" class="w-full mt-2 bg-gradient-to-r from-teal-400 to-emerald-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+        <span>🛋️ Sắm Gối Ôm Chữ U Giảm Đau Lưng & Ngủ Ngon ➔</span>
+      </button>
+    </div>
+
+    <!-- DINH DƯỠNG & VI CHẤT THEO THÁNG -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-rose-100">
+      <h2 class="font-black text-rose-700 text-sm mb-2 flex items-center gap-1.5">
+        <span>🥗</span> BỔ SUNG VI CHẤT & DINH DƯỠNG CHUẨN
+      </h2>
+      <div class="space-y-2 text-[11px] text-slate-600">
+        <div class="bg-slate-50 p-2 rounded-xl">
+          <strong class="text-rose-800">• Axit Folic (Vitamin B9):</strong> Bổ sung từ trước bầu đến hết tháng 3 để ngừa dị tật ống thần kinh thai nhi.
+        </div>
+        <div class="bg-slate-50 p-2 rounded-xl">
+          <strong class="text-rose-800">• Sắt & B12:</strong> Bổ sung xuyên suốt 9 tháng chống thiếu máu, mệt mỏi và hoa mắt.
+        </div>
+        <div class="bg-slate-50 p-2 rounded-xl">
+          <strong class="text-rose-800">• Canxi & D3:</strong> Đẩy mạnh từ tuần 16 trở đi để phát triển xương thai nhi và giúp mẹ không bị đau nhức/rụng răng.
+        </div>
+        <div class="bg-slate-50 p-2 rounded-xl">
+          <strong class="text-rose-800">• DHA / Omega-3:</strong> Hỗ trợ phát triển trí não và thị giác cho bé từ tháng thứ 4.
+        </div>
       </div>
     </div>
 
-    <!-- PHẦN 3: BÌNH THẢN NUÔI CON - GIẢI TỎA ÁP LỰC -->
-    <div class="bg-white rounded-3xl p-4 shadow-sm border border-amber-100 space-y-3">
-      <div class="flex justify-between items-center">
-        <h2 class="font-black text-amber-800 text-sm flex items-center gap-1.5">
-          <span>🌱</span> PHẦN 3: BÌNH THẢN NUÔI CON & GIẢI TỎA ÁP LỰC
+    <!-- DẤU HIỆU CẦN ĐẾN BỆNH VIỆN NGAY -->
+    <div class="bg-red-50 rounded-3xl p-4 shadow-sm border border-red-200">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="font-black text-red-700 text-sm flex items-center gap-1.5">
+          <span>🚨</span> DẤU HIỆU NGUY HIỂM CẦN ĐẾN VIỆN NGAY
         </h2>
-        <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Tâm lý mẹ bỉm</span>
+        <span class="bg-red-200 text-red-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Cấp cứu</span>
+      </div>
+      <ul class="list-disc pl-4 space-y-1 text-slate-700 text-[11px]">
+        <li>Ra máu âm đạo (dù ít hay nhiều, màu tươi hay nâu đậm).</li>
+        <li>Đau bụng dưới dữ dội, quặn thắt liên tục.</li>
+        <li>Rỉ nước ối hoặc vỡ ối ạt ào.</li>
+        <li>Thai máy bất thường: Thai đạp quá dồn dập hoặc dưới 10 lần/12 tiếng.</li>
+        <li>Sốt cao trên 38.5°C, nhức đầu dữ dội, mờ mắt, phù mặt/tay đột ngột (dấu hiệu Tiền Sản Giật).</li>
+      </ul>
+    </div>
+
+    <!-- CHECKLIST LÀN ĐỒ ĐI SINH -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-rose-100">
+      <div class="flex justify-between items-center mb-2.5">
+        <h2 class="font-black text-rose-700 text-sm flex items-center gap-1.5">
+          <span>🎒</span> CHECKLIST COMBO ĐỒ ĐI SINH TRỌN GÓI
+        </h2>
+        <span class="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Đầy đủ A-Z</span>
       </div>
 
-      <div class="space-y-2 text-xs text-slate-600">
-        <div class="bg-amber-50/60 p-3 rounded-2xl border border-amber-100 space-y-1">
-          <p class="font-bold text-amber-900">🥣 Chuyện biếng ăn sinh lý:</p>
-          <p class="text-[11px]">Trẻ biếng ăn theo đợt phát triển (Wonder Weeks, mọc răng). Đừng ép con ăn, hãy tôn trọng tín hiệu từ bé và giữ không khí bàn ăn vui vẻ.</p>
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        <div class="bg-slate-50 p-2.5 rounded-2xl">
+          <p class="font-bold text-teal-700 mb-1">👶 Cho Bé Sơ Sinh:</p>
+          <p class="text-[11px] text-slate-600">5 bộ quần áo xỏ nút, 5 bộ bao tay chân, 3 nón thóp, 1 gói tã dán NB, 10 khăn xô, 2 khăn tắm lớn, bình sữa sơ sinh, sữa công thức nhỏ, nước muối sinh lý 0.9%.</p>
         </div>
-        <div class="bg-rose-50/60 p-3 rounded-2xl border border-rose-100 space-y-1">
-          <p class="font-bold text-rose-900">⚖️ Bỏ qua so sánh "con nhà người ta":</p>
-          <p class="text-[11px]">Mỗi đứa trẻ có tốc độ riêng. Miễn con vui vẻ, hoạt bát, mốc vận động tốt là mẹ đã nuôi con cực kỳ xuất sắc rồi!</p>
+        <div class="bg-slate-50 p-2.5 rounded-2xl">
+          <p class="font-bold text-rose-700 mb-1">🤰 Cho Mẹ Bầu:</p>
+          <p class="text-[11px] text-slate-600">3 bộ đồ mặc sau sinh mở ngực cho con bú, 1 gói BVS mama, 2 gói quần lót giấy, vớ chân giữ ấm, khăn mặt, cốc uống nước, CCCD + BHYT + Hồ sơ khám thai.</p>
+        </div>
+      </div>
+
+      <button onclick="openShopee(LINK_COMBO_DI_SINH)" class="w-full mt-3 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+        <span>🧺 Sắm Combo Giỏ Đồ Đi Sinh Trọn Gói Giá Rẻ ➔</span>
+      </button>
+    </div>
+
+    <!-- NÚT MUA SẮM TIẾP THỊ SHOPEE MẸ BẦU -->
+    <div class="bg-rose-100/60 p-3.5 rounded-3xl border border-rose-200 text-center space-y-2">
+      <p class="font-black text-xs text-rose-800">🛍️ SẢN PHẨM KHUYÊN DÙNG CHO MẸ BẦU ONGBO90KG</p>
+      
+      <div class="grid grid-cols-3 gap-1.5">
+        <button onclick="openShopee(LINK_GOI_OM)" class="bg-white p-2.5 rounded-2xl border border-rose-200 text-center shadow-sm active:scale-95 transition">
+          <span class="text-xl">🛋️</span>
+          <p class="font-black text-[11px] text-slate-800 mt-1 leading-tight">Gối Ôm Bầu</p>
+          <p class="text-[9px] text-teal-600 font-bold mt-0.5">Nâng đỡ bụng</p>
+        </button>
+
+        <button onclick="openShopee(LINK_DO_BAU)" class="bg-white p-2.5 rounded-2xl border border-rose-200 text-center shadow-sm active:scale-95 transition">
+          <span class="text-xl">👗</span>
+          <p class="font-black text-[11px] text-slate-800 mt-1 leading-tight">Váy Đồ Bầu</p>
+          <p class="text-[9px] text-rose-500 font-bold mt-0.5">Xinh & thoáng</p>
+        </button>
+
+        <button onclick="openShopee(LINK_COMBO_DI_SINH)" class="bg-white p-2.5 rounded-2xl border border-rose-200 text-center shadow-sm active:scale-95 transition">
+          <span class="text-xl">📦</span>
+          <p class="font-black text-[11px] text-slate-800 mt-1 leading-tight">Combo Đi Sinh</p>
+          <p class="text-[9px] text-amber-600 font-bold mt-0.5">Trọn gói A-Z</p>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- PHẦN 2: NỘI DUNG NGUYÊN BẢN TRANG 2 (BÌNH THẢN NUÔI CON) -->
+    <!-- ========================================== -->
+
+    <!-- BANNER TRÂN TRỌNG TRANG 2 -->
+    <div class="bg-white/90 rounded-3xl p-3.5 border border-amber-100 shadow-sm flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">🌱</span>
+        <div>
+          <h2 class="font-black text-sm text-amber-900 leading-tight">BÌNH THẢN NUÔI CON</h2>
+          <p class="text-[10px] font-bold text-amber-600">Góc Chia Sẻ & Giải Tỏa Áp Lực Mẹ Bỉm</p>
+        </div>
+      </div>
+      <button onclick="openShopee(LINK_GHE_AN)" class="bg-amber-600 text-white font-bold text-[11px] px-3 py-1.5 rounded-full shadow-sm active:scale-95 transition">
+        ☕ Góc Thư Giãn
+      </button>
+    </div>
+
+    <!-- THÔNG ĐIỆP CHỦ ĐẠO -->
+    <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-3 text-xs text-emerald-900 flex items-start gap-2.5 shadow-sm">
+      <span class="text-xl">🕊️</span>
+      <p class="leading-relaxed font-semibold">
+        <strong>Mẹ ơi, dừng lại một chút nhé:</strong> Con ăn ít một bữa không sao, cân nặng đứng yên một tháng chẳng hề gì. Một người mẹ vui vẻ, thong thả quan trọng hơn rất nhiều một người mẹ hoàn hảo!
+      </p>
+    </div>
+
+    <!-- PHÂN TÍCH 1: CHUYỆN ĂN UỐNG -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-amber-100 space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+        <h2 class="font-black text-amber-800 text-sm flex items-center gap-1.5">
+          <span>🥣</span> 1. CON BIẾNG ĂN: LỖI KHÔNG PHẢI TẠI MẸ!
+        </h2>
+        <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Sinh lý tự nhiên</span>
+      </div>
+
+      <div class="space-y-2 text-xs">
+        <div class="bg-slate-50 p-3 rounded-2xl space-y-1">
+          <p class="font-bold text-slate-800">🔍 Sự thật y khoa & Sinh lý phát triển:</p>
+          <p class="text-[11px] text-slate-600 leading-relaxed">
+            Trẻ nhỏ có những đợt <strong>biếng ăn sinh lý</strong> trùng với mốc phát triển kỹ năng (biết lẫy, bò, mọc răng, Wonder Weeks). Lúc này nhu cầu khám phá thế giới của bé cao hơn nhu cầu nạp năng lượng.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/60 p-3 rounded-2xl space-y-1 border border-amber-100">
+          <p class="font-bold text-amber-900">💡 Giải pháp giải tỏa áp lực tâm lý:</p>
+          <ul class="list-disc pl-4 text-[11px] text-slate-600 space-y-1">
+            <li><strong>Tôn trọng tín hiệu của con:</strong> Nếu bé ngoảnh mặt, lắc đầu hoặc phun thức ăn, hãy dọn bữa sau 20-30 phút. Đừng kéo dài bữa ăn thành 1-2 tiếng.</li>
+            <li><strong>Không biến mâm cơm thành chiến trường:</strong> Không ép, không dọa nạt, không bật tivi/điện thoại để dụ ăn thụ động.</li>
+            <li><strong>Quyền của con:</strong> Mẹ quyết định <i>khi nào ăn</i> và <i>ăn món gì</i>, còn con có quyền quyết định <i>ăn bao nhiêu</i>!</li>
+          </ul>
         </div>
       </div>
 
       <button onclick="openShopee(LINK_GHE_AN)" class="w-full bg-gradient-to-r from-amber-500 to-orange-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
-        <span>🪑 Sắm Ghế Ăn Dặm & Nồi Nấu Chậm Rảnh Tay Cho Mẹ ➔</span>
+        <span>🪑 Xem Ghế Ăn Dặm Tập Cho Bé Tự Lập & Mẹ Rảnh Tay ➔</span>
       </button>
     </div>
 
-    <!-- PHẦN 4: THIẾT BỊ Y TẾ & CHĂM SÓC SỨC KHỎE GIA ĐÌNH -->
-    <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200 space-y-3">
-      <div class="flex justify-between items-center">
-        <h2 class="font-black text-slate-800 text-sm flex items-center gap-1.5">
-          <span>🔥</span> PHẦN 4: DỤNG CỤ ĐO NHIỆT & TIỆN ÍCH CHO BÉ
+    <!-- PHÂN TÍCH 2: CHUYỆN GIẤC NGỦ & QUẤY KHÓC -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-amber-100 space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+        <h2 class="font-black text-rose-800 text-sm flex items-center gap-1.5">
+          <span>🌙</span> 2. QUẤY KHÓC & GẮT NGỦ: BÉ ĐANG BẬT TÍN HIỆU
         </h2>
-        <span class="bg-red-100 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded-full">Cần thiết</span>
+        <span class="bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Giai đoạn tạm thời</span>
       </div>
 
+      <div class="space-y-2 text-xs">
+        <div class="bg-slate-50 p-3 rounded-2xl space-y-1">
+          <p class="font-bold text-slate-800">🧠 Bản chất tâm lý học trẻ em:</p>
+          <p class="text-[11px] text-slate-600 leading-relaxed">
+            Tiếng khóc là ngôn ngữ duy nhất của bé. Bé gắt ngủ, đòi bám mẹ không phải do bé "hư" hay mẹ "chiều quá hóa hư", mà vì não bộ bé đang bị quá tải thông tin sau một ngày học hỏi.
+          </p>
+        </div>
+
+        <div class="bg-rose-50/60 p-3 rounded-2xl space-y-1 border border-rose-100">
+          <p class="font-bold text-rose-900">💡 Mẹo giữ bình tĩnh cho mẹ:</p>
+          <ul class="list-disc pl-4 text-[11px] text-slate-600 space-y-1">
+            <li><strong>Quy tắc 5 giây:</strong> Hít một hơi thật sâu trước khi bế con lên. Khi mẹ bình tĩnh, nhịp tim và năng lượng thư thái của mẹ sẽ lan truyền sang bé.</li>
+            <li><strong>Nhớ rằng "Mọi thứ rồi sẽ qua":</strong> Giai đoạn khủng hoảng giấc ngủ chỉ kéo dài từ vài ngày đến 1-2 tuần. Rồi bé sẽ ngủ ngon trở lại!</li>
+          </ul>
+        </div>
+      </div>
+
+      <button onclick="openShopee(LINK_NOI_NAU_CHAM)" class="w-full bg-gradient-to-r from-rose-400 to-pink-500 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+        <span>🍲 Nồi Nấu Cháo Chậm Tự Ngắt - Mẹ Đêm Ngủ Ngon Cả Nhà An Tâm ➔</span>
+      </button>
+    </div>
+
+    <!-- PHÂN TÍCH 3: THOÁT CẠM BẪY SO SÁNH -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-amber-100 space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+        <h2 class="font-black text-teal-800 text-sm flex items-center gap-1.5">
+          <span>📊</span> 3. BỎ QUA BẢNG CÂN NẶNG & CON NHÀ NGƯỜI TA
+        </h2>
+        <span class="bg-teal-100 text-teal-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Tự tin nuôi con</span>
+      </div>
+
+      <div class="space-y-2 text-xs">
+        <div class="bg-slate-50 p-3 rounded-2xl space-y-1">
+          <p class="font-bold text-slate-800">⚖️ Góc nhìn thực tế từ OngBo90kg:</p>
+          <p class="text-[11px] text-slate-600 leading-relaxed">
+            Mỗi đứa trẻ có một mã di truyền, khung xương và tốc độ phát triển riêng biệt. Một đứa trẻ 9kg hoạt bát, lanh lợi, biết cười đùa tốt hơn rất nhiều một đứa trẻ 12kg nhưng mệt mỏi, thụ động do bị ép ăn.
+          </p>
+        </div>
+
+        <div class="bg-teal-50/60 p-3 rounded-2xl space-y-1 border border-teal-100">
+          <p class="font-bold text-teal-900">💡 Thước đo sự khỏe mạnh thực sự:</p>
+          <p class="text-[11px] text-slate-600 leading-relaxed">
+            Bé vui vẻ, biết tương tác với bố mẹ, đi tiểu ra nước tiểu trong/vàng nhạt, đạt các mốc vận động (lẫy, bò, đi) đúng độ tuổi ➔ <strong>Mẹ đã nuôi con cực kỳ xuất sắc!</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHÂN TÍCH 4: CHĂM SÓC BẢN THÂN MẸ (CỐT LÕI) -->
+    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-4 shadow-sm border border-amber-200 space-y-2.5">
+      <h2 class="font-black text-amber-900 text-sm flex items-center gap-1.5">
+        <span>🧘‍♀️</span> 4. MẸ PHẢI HẠNH PHÚC THÌ CON MỚI HẠNH PHÚC
+      </h2>
+      <p class="text-[11px] text-slate-600 leading-relaxed">
+        Đừng cố ôm đồm mọi thứ để trở thành người mẹ hoàn hảo. Nhà cửa chưa lau, bát đĩa chưa rửa cứ để đó. Hãy mở lời nhờ sự hỗ trợ từ người chồng, người thân trong nhà.
+      </p>
+      <div class="bg-white/80 p-2.5 rounded-2xl text-[11px] font-bold text-amber-800 text-center">
+        "Một người mẹ biết nghỉ ngơi, tinh thần thoải mái chính là món quà tuyệt vời nhất dành cho con!"
+      </div>
+    </div>
+
+    <!-- NÚT GỢI Ý ĐỒ DÙNG GIẢI PHÓNG SỨC LAO ĐỘNG -->
+    <div class="bg-amber-100/60 p-3.5 rounded-3xl border border-amber-200 text-center space-y-2">
+      <p class="font-black text-xs text-amber-900">🎁 ĐỒ DÙNG GIÚP MẸ GIẢI PHÓNG SỨC LAO ĐỘNG</p>
+      
       <div class="grid grid-cols-3 gap-1.5">
-        <button onclick="openShopee(LINK_NHIET_KE)" class="bg-slate-50 p-2.5 rounded-2xl border text-center active:scale-95 transition">
-          <span class="text-xl">🔫</span>
-          <p class="font-bold text-[11px] text-slate-800 mt-1">Nhiệt Kế Trán</p>
-          <p class="text-[9px] text-red-600 font-bold">Đo sốt đêm</p>
+        <button onclick="openShopee(LINK_GHE_AN)" class="bg-white p-2.5 rounded-2xl border border-amber-200 text-center shadow-sm active:scale-95 transition">
+          <span class="text-xl">🪑</span>
+          <p class="font-black text-[11px] text-slate-800 mt-1 leading-tight">Ghế Ăn Dặm</p>
+          <p class="text-[9px] text-amber-600 font-bold mt-0.5">Bé tập tự lập</p>
         </button>
 
-        <button onclick="openShopee(LINK_THU_SUA)" class="bg-slate-50 p-2.5 rounded-2xl border text-center active:scale-95 transition">
+        <button onclick="openShopee(LINK_NOI_NAU_CHAM)" class="bg-white p-2.5 rounded-2xl border border-amber-200 text-center shadow-sm active:scale-95 transition">
+          <span class="text-xl">🍲</span>
+          <p class="font-black text-[11px] text-slate-800 mt-1 leading-tight">Nồi Nấu Chậm</p>
+          <p class="text-[9px] text-rose-500 font-bold mt-0.5">Không canh bếp</p>
+        </button>
+
+        <button onclick="openShopee(LINK_MANTRA_LOI)" class="bg-white p-2.5 rounded-2xl border border-amber-200 text-center shadow-sm active:scale-95 transition">
           <span class="text-xl">🍼</span>
-          <p class="font-bold text-[11px] text-slate-800 mt-1">Thử Nhiệt Sữa</p>
-          <p class="text-[9px] text-orange-600 font-bold">Chống đau bụng</p>
+          <p class="font-black text-[11px] text-slate-800 mt-1 leading-tight">Máy Tiệt Trùng</p>
+          <p class="text-[9px] text-teal-600 font-bold mt-0.5">Sạch sẽ rảnh tay</p>
         </button>
+      </div>
+    </div>
 
-        <button onclick="openShopee(LINK_NHIET_TAM)" class="bg-slate-50 p-2.5 rounded-2xl border text-center active:scale-95 transition">
-          <span class="text-xl">🐥</span>
-          <p class="font-bold text-[11px] text-slate-800 mt-1">Nhiệt Kế Tắm</p>
-          <p class="text-[9px] text-blue-600 font-bold">Tránh cảm lạnh</p>
-        </button>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 3: NỘI DUNG NGUYÊN BẢN TRANG 3 (KIDCARE 365) -->
+    <!-- ========================================== -->
+
+    <!-- BANNER TRANG 3 -->
+    <div class="bg-white border border-slate-200 rounded-3xl p-4 shadow-sm space-y-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center text-white text-lg font-bold">💉</div>
+          <span class="font-bold text-base text-slate-900">KidCare 365</span>
+        </div>
+        <span class="text-[11px] bg-teal-50 text-teal-700 px-3 py-1 rounded-full font-semibold border border-teal-200">
+          Lịch VNVC & Long Châu 2026
+        </span>
+      </div>
+
+      <div class="bg-gradient-to-r from-teal-600 to-emerald-600 rounded-2xl p-3.5 text-white shadow-md space-y-1">
+        <h2 class="text-xs font-bold">👶 Sổ Tay Tra Cứu Lịch Tiêm & Chăm Sóc Trẻ</h2>
+        <p class="text-[11px] text-teal-100 leading-relaxed">
+          Bấm chọn độ tuổi của bé bên dưới để tra cứu chi tiết phác đồ, mốc tháng tuổi, chi phí và lưu ý chăm sóc sức khỏe mùa lạnh.
+        </p>
+      </div>
+
+      <!-- KHU VỰC 1 TRANG 3: NÚT CHỌN ĐỘ TUỔI -->
+      <div class="space-y-2">
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">
+          👇 Bấm chọn độ tuổi hiện tại của bé:
+        </label>
+        
+        <div class="grid grid-cols-3 gap-2">
+          <button onclick="selectAge('1-2', 'https://s.shopee.vn/30ojYceOxs')" 
+                  class="border-2 border-teal-500 bg-teal-50 text-teal-800 py-3 rounded-xl font-bold text-xs hover:bg-teal-600 hover:text-white transition shadow-sm active:scale-95">
+             Bé 1 - 2 Tuổi
+          </button>
+
+          <button onclick="selectAge('2-3', 'https://s.shopee.vn/30ojYceOxs')" 
+                  class="border-2 border-teal-500 bg-teal-50 text-teal-800 py-3 rounded-xl font-bold text-xs hover:bg-teal-600 hover:text-white transition shadow-sm active:scale-95">
+             Bé 2 - 3 Tuổi
+          </button>
+
+          <button onclick="selectAge('4-5', 'https://s.shopee.vn/30ojYceOxs')" 
+                  class="border-2 border-teal-500 bg-teal-50 text-teal-800 py-3 rounded-xl font-bold text-xs hover:bg-teal-600 hover:text-white transition shadow-sm active:scale-95">
+             Bé 4 - 5 Tuổi
+          </button>
+        </div>
+      </div>
+
+      <!-- KHU VỰC 2 TRANG 3: HIỂN THỊ KẾT QUẢ LỊCH TIÊM CHI TIẾT -->
+      <div id="result-box" class="hidden space-y-4 pt-2">
+
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-2.5 text-xs text-emerald-800 flex items-center justify-between">
+          <span>✅ Đã cập nhật bảng giá VNVC / Long Châu & mở ưu đãi Shopee!</span>
+        </div>
+
+        <!-- KẾT QUẢ BÉ 1 - 2 TUỔI -->
+        <div id="content-1-2" class="detail-content hidden bg-white rounded-2xl p-3 border space-y-3.5">
+          <h3 class="font-bold text-sm text-teal-700 border-b pb-2 flex items-center justify-between">
+            <span>📌 Lịch Tiêm Bé 1 - 2 Tuổi (12 - 24 tháng)</span>
+            <span class="text-[10px] bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full">Giai Đoạn Củng Cố</span>
+          </h3>
+          
+          <div class="space-y-3 text-xs">
+            <!-- Mũi 1 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Sởi - Quai bị - Rubella (MMR II / Priorix)</span>
+                <span class="text-teal-700 font-bold">~485k - 498k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Lần 1 khi tròn <b>12 - 15 tháng tuổi</b>. Lần 2 nhắc sau 3 tháng hoặc lúc 4-6 tuổi.</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Tại sao cần tiêm:</b> Giai đoạn này kháng thể mẹ truyền bắt đầu cạn kiệt, trẻ rất dễ bị biến chứng sởi gây viêm phổi, viêm não.</p>
+            </div>
+
+            <!-- Mũi 2 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Thủy Đậu (Varilrix / Varivax / Barycela)</span>
+                <span class="text-teal-700 font-bold">~1.070k - 1.138k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Mũi 1 từ <b>12 - 15 tháng tuổi</b>. Mũi 2 tiêm nhắc sau đó ít nhất 3 tháng.</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Phòng tránh:</b> Giảm 98% nguy cơ mọc mụn nước thủy đậu lây lan toàn thân và sẹo vĩnh viễn.</p>
+            </div>
+
+            <!-- Mũi 3 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Viêm Gan A (Avaxim 80U / Havax)</span>
+                <span class="text-teal-700 font-bold">~295k - 685k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Mũi 1 từ <b>12 tháng tuổi</b>. Mũi 2 tiêm nhắc lại sau mũi 1 từ 6 - 12 tháng.</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Phòng tránh:</b> Bảo vệ gan khi trẻ bắt đầu ăn dặm phong phú và liếm/ngậm đồ chơi.</p>
+            </div>
+
+            <!-- Mũi 4 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Viêm Não Nhật Bản (Imojev / Jevax)</span>
+                <span class="text-teal-700 font-bold">~920k - 968k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Mũi 1 khi trẻ tròn <b>9 - 12 tháng</b>. Mũi 2 tiêm nhắc lại sau 1 năm.</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Đặc biệt quan trọng:</b> Muỗi muỗi đốt lây truyền bệnh tổn thương thần kinh trung ương nguy hiểm.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- KẾT QUẢ BÉ 2 - 3 TUỔI -->
+        <div id="content-2-3" class="detail-content hidden bg-white rounded-2xl p-3 border space-y-3.5">
+          <h3 class="font-bold text-sm text-teal-700 border-b pb-2 flex items-center justify-between">
+            <span>📌 Lịch Tiêm Bé 2 - 3 Tuổi (24 - 36 tháng)</span>
+            <span class="text-[10px] bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full">Bắt Đầu Đi Lớp</span>
+          </h3>
+          
+          <div class="space-y-3 text-xs">
+            <!-- Mũi 1 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 6 Trong 1 (Hexaxim / Infanrix Hexa)</span>
+                <span class="text-teal-700 font-bold">~995k - 1.098k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Mũi 4 (tiêm nhắc lại) trong khoảng từ <b>16 - 24 tháng tuổi</b> (cần hoàn thành trước 2 tuổi).</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Phòng bệnh:</b> Bạch hầu, Ho gà, Uốn ván, Bại liệt, Viêm gan B, Viêm màng não mủ do Hib.</p>
+            </div>
+
+            <!-- Mũi 2 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Cúm Mùa (Vaxigrip Tetra / Influvac)</span>
+                <span class="text-teal-700 font-bold">~333k - 356k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Tiêm định kỳ <b>1 năm / 1 lần</b> (đặc biệt vào giai đoạn Thu - Đông giao mùa).</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Lợi ích:</b> Giảm biến chứng phế quản, viêm phổi và giảm số lần sốt đêm nghỉ học ở trường.</p>
+            </div>
+
+            <!-- Mũi 3 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Tả (mORCVAX) & Thương Hàn (Typhim Vi)</span>
+                <span class="text-teal-700 font-bold">~180k - 380k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Khi bé tròn <b>24 tháng tuổi (2 tuổi)</b>. Tả uống 2 liều cách nhau 2 tuần. Thương hàn tiêm 1 mũi nhắc mỗi 3 năm.</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Môi trường lớp học:</b> Phòng nhiễm khuẩn đường tiêu hóa khi con ăn uống tập thể ở nhà trẻ.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- KẾT QUẢ BÉ 4 - 5 TUỔI -->
+        <div id="content-4-5" class="detail-content hidden bg-white rounded-2xl p-3 border space-y-3.5">
+          <h3 class="font-bold text-sm text-teal-700 border-b pb-2 flex items-center justify-between">
+            <span>📌 Lịch Tiêm Bé 4 - 5 Tuổi (Tiền Tiểu Học)</span>
+            <span class="text-[10px] bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full">Chuẩn Bị Vào Lớp 1</span>
+          </h3>
+          
+          <div class="space-y-3 text-xs">
+            <!-- Mũi 1 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Sốt Xuất Huyết (Qdenga)</span>
+                <span class="text-teal-700 font-bold">~1.290k - 1.390k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Dành cho trẻ từ <b>tròn 4 tuổi trở lên</b>. Phác đồ gồm 2 mũi tiêm cách nhau đúng 3 tháng.</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Vắc-xin mới:</b> Phòng 4 chủng virus Dengue, giúp bé không lo nguy cơ nhập viện cấp cứu do sốt xuất huyết.</p>
+            </div>
+
+            <!-- Mũi 2 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Bạch Hầu - Ho Gà - Uốn Ván - Bại Liệt</span>
+                <span class="text-teal-700 font-bold">~700k - 850k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Tiêm 1 mũi nhắc lại trong độ tuổi từ <b>4 - 6 tuổi</b> trước khi trẻ bước vào Tiểu học.</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Nhắc miễn dịch:</b> Miễn dịch từ mũi 6in1 lúc nhỏ đã giảm dần, cần củng cố để kháng bệnh học đường.</p>
+            </div>
+
+            <!-- Mũi 3 -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+              <div class="flex justify-between font-bold text-slate-800">
+                <span>💉 Sởi - Quai Bị - Rubella (Mũi 2 nhắc lại)</span>
+                <span class="text-teal-700 font-bold">~485k - 498k</span>
+              </div>
+              <p class="text-[11px] text-slate-600">⏰ <b>Thời gian:</b> Tiêm nhắc mũi 2 ở mốc <b>4 - 6 tuổi</b> (nếu chưa nhắc ở lúc 15-18 tháng tuổi).</p>
+              <p class="text-[11px] text-slate-500 italic">💡 <b>Tác dụng:</b> Đảm bảo tạo kháng thể bền vững đến tận tuổi trưởng thành.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KHU VỰC 3 TRANG 3: COMBO BỘ 3 DỤNG CỤ ĐO NHIỆT ĐỘ -->
+      <div class="space-y-3 pt-2">
+        <div class="flex justify-between items-center border-b pb-2">
+          <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider">
+            🔥 BỘ 3 DỤNG CỤ ĐO NHIỆT MẸ BỈM CẦN CÓ
+          </label>
+          <span class="text-[10px] bg-red-100 text-red-600 font-bold px-2 py-0.5 rounded-full">Tiết Kiệm Đêm Lạnh</span>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 p-3 rounded-xl flex justify-between items-center">
+          <div>
+            <span class="block text-xs font-bold text-amber-900">📦 Trọn Bộ 3 Món Chăm Sóc Sức Khỏe Bé</span>
+            <span class="text-[10px] text-amber-700">Gồm: Đo trán + Đo sữa + Đo nước tắm</span>
+          </div>
+          <div class="text-right">
+            <span class="block text-xs font-extrabold text-red-600">349.000đ - 594.000đ</span>
+            <span class="text-[9px] text-slate-400 line-through">650.000đ</span>
+          </div>
+        </div>
+
+        <div class="space-y-2 pt-1">
+          <!-- Món 1: Nhiệt kế hồng ngoại -->
+          <a href="https://s.shopee.vn/30ojYceOxs" target="_blank" 
+             class="flex justify-between items-center bg-red-50 border border-red-200 p-3 rounded-xl hover:bg-red-100 transition group">
+            <div class="flex items-center space-x-2.5">
+              <span class="text-base">🔫</span>
+              <div>
+                <strong class="block text-xs text-slate-800 group-hover:text-red-700">1. Nhiệt Kế Hồng Ngoại Bắn Trán (1s)</strong>
+                <span class="text-[10px] text-slate-500">Đo khi bé sốt đêm, không làm bé thức giấc</span>
+              </div>
+            </div>
+            <div class="text-right shrink-0 ml-2">
+              <span class="block text-xs font-bold text-red-600">195k - 415k</span>
+              <span class="inline-block bg-red-500 text-white font-bold text-[9px] px-2 py-1 rounded-lg mt-0.5">Xem Shop</span>
+            </div>
+          </a>
+
+          <!-- Món 2: Bút thử nhiệt độ sữa -->
+          <a href="https://s.shopee.vn/3LRZxA8Zl9" target="_blank" 
+             class="flex justify-between items-center bg-orange-50 border border-orange-200 p-3 rounded-xl hover:bg-orange-100 transition group">
+            <div class="flex items-center space-x-2.5">
+              <span class="text-base">🍼</span>
+              <div>
+                <strong class="block text-xs text-slate-800 group-hover:text-orange-700">2. Bút Thử Nhiệt Đồ Ăn & Sữa Pha</strong>
+                <span class="text-[10px] text-slate-500">Giữ chuẩn dưỡng chất sữa, chống đau bụng</span>
+              </div>
+            </div>
+            <div class="text-right shrink-0 ml-2">
+              <span class="block text-xs font-bold text-orange-600">95k - 120k</span>
+              <span class="inline-block bg-orange-500 text-white font-bold text-[9px] px-2 py-1 rounded-lg mt-0.5">Xem Shop</span>
+            </div>
+          </a>
+
+          <!-- Món 3: Nhiệt kế thả chậu tắm -->
+          <a href="https://s.shopee.vn/8AWpiBMxzv" target="_blank" 
+             class="flex justify-between items-center bg-blue-50 border border-blue-200 p-3 rounded-xl hover:bg-blue-100 transition group">
+            <div class="flex items-center space-x-2.5">
+              <span class="text-base">🐥</span>
+              <div>
+                <strong class="block text-xs text-slate-800 group-hover:text-blue-700">3. Nhiệt Kế Thả Chậu Tắm Cho Bé</strong>
+                <span class="text-[10px] text-slate-500">Đo nước tắm 37-38°C phòng cảm lạnh</span>
+              </div>
+            </div>
+            <div class="text-right shrink-0 ml-2">
+              <span class="block text-xs font-bold text-blue-600">59.000đ</span>
+              <span class="inline-block bg-blue-500 text-white font-bold text-[9px] px-2 py-1 rounded-lg mt-0.5">Xem Shop</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
   </main>
+
+  <!-- FOOTER TỔNG TRANG 3 -->
+  <footer class="text-center py-4 text-xs text-slate-400 bg-white border-t mt-4">
+    © 2026 Cẩm Nang Mẹ & Bé A-Z. Bảng tra cứu thai kỳ, lịch tiêm chủng & thiết bị chăm sóc bé.
+  </footer>
 
   <!-- THANH BOTTOM NAV CỐ ĐỊNH -->
   <nav class="fixed bottom-2 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] max-w-md bg-white/95 backdrop-blur-md rounded-3xl p-2.5 shadow-md border border-rose-200 flex justify-around items-center z-50">
@@ -258,13 +726,13 @@
       <span class="text-base">🤰</span>
       <span>Mẹ Bầu</span>
     </button>
-    <button onclick="openShopee(LINK_TIEM_CHUNG)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-teal-600">
-      <span class="text-base">💉</span>
-      <span>Lịch Tiêm</span>
-    </button>
     <button onclick="openShopee(LINK_GHE_AN)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-amber-600">
       <span class="text-base">🌱</span>
       <span>Nuôi Con</span>
+    </button>
+    <button onclick="openShopee(LINK_NHIET_KE)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-teal-600">
+      <span class="text-base">💉</span>
+      <span>Lịch Tiêm</span>
     </button>
   </nav>
 
