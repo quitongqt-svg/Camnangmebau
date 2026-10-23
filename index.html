@@ -22,25 +22,9 @@
     const LINK_THU_SUA = "https://s.shopee.vn/3LRZxA8Zl9";
     const LINK_NHIET_TAM = "https://s.shopee.vn/8AWpiBMxzv";
 
-    const AFFILIATE_LINKS = [
-      LINK_GOI_OM, LINK_COMBO_DI_SINH, LINK_DO_BAU, 
-      LINK_GHE_AN, LINK_NOI_NAU_CHAM, LINK_NHIET_KE, LINK_THU_SUA, LINK_NHIET_TAM
-    ];
-
-    function getRandomShopeeLink() {
-      return AFFILIATE_LINKS[Math.floor(Math.random() * AFFILIATE_LINKS.length)];
-    }
-
-    // Tự động nhảy link Shopee lần đầu truy cập
-    const urlParams = new URLSearchParams(window.location.search);
-    if (!urlParams.get('visited')) {
-      window.history.pushState({page: 1}, "", window.location.href + "?visited=true");
-      window.location.href = getRandomShopeeLink();
-    }
-
+    // HÀM MỞ LINK KHI NGƯỜI DÙNG CHỦ ĐỘNG BẤM NÚT (AN TOÀN 100% CHÍNH SÁCH SHOPEE)
     function openShopee(customLink) {
-      const linkToOpen = customLink || getRandomShopeeLink();
-      window.open(linkToOpen, '_blank');
+      window.open(customLink, '_blank');
     }
 
     function selectAge(ageGroup, affiliateUrl) {
@@ -65,7 +49,7 @@
           <p class="text-[10px] font-bold text-rose-500">Thai Kỳ • Lịch Tiêm VNVC • Giải Tỏa Áp Lực Mẹ Bỉm</p>
         </div>
       </div>
-      <button onclick="openShopee()" class="bg-rose-500 text-white font-bold text-[11px] px-3 py-1.5 rounded-full shadow-sm active:scale-95 transition">
+      <button onclick="openShopee(LINK_GOI_OM)" class="bg-rose-500 text-white font-bold text-[11px] px-3 py-1.5 rounded-full shadow-sm active:scale-95 transition">
         🛍️ Shop Mẹ & Bé
       </button>
     </div>
@@ -116,7 +100,7 @@
             <span>3. Tuần 21 - 24:</span>
             <span>Siêu âm hình thái 4D</span>
           </div>
-          <p class="text-[11px] text-slate-500 font-normal">Khảo sát toàn bộ cấu trúc cơ thể thai nhi: tim, tim phổi, não bộ, nụ mầm răng, tim mạch, các chi và dị tật sứt môi hở hàm ếch.</p>
+          <p class="text-[11px] text-slate-500 font-normal">Khảo sát toàn bộ cấu trúc cơ thể thai nhi: tim, tim phổi, nụ mầm răng, tim mạch, các chi và dị tật sứt môi hở hàm ếch.</p>
         </div>
 
         <div class="bg-purple-50/60 p-2.5 rounded-xl border border-purple-100">
@@ -136,7 +120,7 @@
         </div>
       </div>
 
-      <button onclick="openShopee(LINK_DO_BAU)" class="w-full mt-3 bg-gradient-to-r from-rose-400 to-pink-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+      <button onclick="openShopee(LINK_DO_BAU)" class="w-full mt-3 bg-gradient-to-r from-rose-400 to-pink-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1 active:scale-95 transition">
         <span>👗 Xem Mẫu Váy Bầu Thoải Mái Đi Khám Thai ➔</span>
       </button>
     </div>
@@ -207,7 +191,7 @@
         </div>
       </div>
 
-      <button onclick="openShopee(LINK_GOI_OM)" class="w-full mt-2 bg-gradient-to-r from-teal-400 to-emerald-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+      <button onclick="openShopee(LINK_GOI_OM)" class="w-full mt-2 bg-gradient-to-r from-teal-400 to-emerald-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1 active:scale-95 transition">
         <span>🛋️ Sắm Gối Ôm Chữ U Giảm Đau Lưng & Ngủ Ngon ➔</span>
       </button>
     </div>
@@ -270,7 +254,7 @@
         </div>
       </div>
 
-      <button onclick="openShopee(LINK_COMBO_DI_SINH)" class="w-full mt-3 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+      <button onclick="openShopee(LINK_COMBO_DI_SINH)" class="w-full mt-3 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1 active:scale-95 transition">
         <span>🧺 Sắm Combo Giỏ Đồ Đi Sinh Trọn Gói Giá Rẻ ➔</span>
       </button>
     </div>
@@ -319,7 +303,7 @@
       </button>
     </div>
 
-    <!-- THÔNG ĐIỆP CHỦ ĐẠO -->
+    <!-- thông ĐIỆP CHỦ ĐẠO -->
     <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-3 text-xs text-emerald-900 flex items-start gap-2.5 shadow-sm">
       <span class="text-xl">🕊️</span>
       <p class="leading-relaxed font-semibold">
@@ -354,7 +338,7 @@
         </div>
       </div>
 
-      <button onclick="openShopee(LINK_GHE_AN)" class="w-full bg-gradient-to-r from-amber-500 to-orange-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
+      <button onclick="openShopee(LINK_GHE_AN)" class="w-full bg-gradient-to-r from-amber-500 to-orange-400 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1 active:scale-95 transition">
         <span>🪑 Xem Ghế Ăn Dặm Tập Cho Bé Tự Lập & Mẹ Rảnh Tay ➔</span>
       </button>
     </div>
@@ -385,8 +369,8 @@
         </div>
       </div>
 
-      <button onclick="openShopee(LINK_NOI_NAU_CHAM)" class="w-full bg-gradient-to-r from-rose-400 to-pink-500 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1">
-        <span>🍲 Nồi Nấu Cháo Chậm Tự Ngắt - Mẹ Đêm Ngủ Ngon Cả Nhà An Tâm ➔</span>
+      <button onclick="openShopee(LINK_NOI_NAU_CHAM)" class="w-full bg-gradient-to-r from-rose-400 to-pink-500 text-white font-black text-xs py-2.5 rounded-2xl shadow-sm flex items-center justify-center gap-1 active:scale-95 transition">
+        <span>🍲 Nồi Nấu Chậm Tự Ngắt - Mẹ Đêm Ngủ Ngon Cả Nhà An Tâm ➔</span>
       </button>
     </div>
 
@@ -663,8 +647,8 @@
 
         <div class="space-y-2 pt-1">
           <!-- Món 1: Nhiệt kế hồng ngoại -->
-          <a href="https://s.shopee.vn/30ojYceOxs" target="_blank" 
-             class="flex justify-between items-center bg-red-50 border border-red-200 p-3 rounded-xl hover:bg-red-100 transition group">
+          <button onclick="openShopee(LINK_NHIET_KE)" 
+             class="w-full text-left flex justify-between items-center bg-red-50 border border-red-200 p-3 rounded-xl hover:bg-red-100 transition group active:scale-95">
             <div class="flex items-center space-x-2.5">
               <span class="text-base">🔫</span>
               <div>
@@ -676,11 +660,11 @@
               <span class="block text-xs font-bold text-red-600">195k - 415k</span>
               <span class="inline-block bg-red-500 text-white font-bold text-[9px] px-2 py-1 rounded-lg mt-0.5">Xem Shop</span>
             </div>
-          </a>
+          </button>
 
           <!-- Món 2: Bút thử nhiệt độ sữa -->
-          <a href="https://s.shopee.vn/3LRZxA8Zl9" target="_blank" 
-             class="flex justify-between items-center bg-orange-50 border border-orange-200 p-3 rounded-xl hover:bg-orange-100 transition group">
+          <button onclick="openShopee(LINK_THU_SUA)" 
+             class="w-full text-left flex justify-between items-center bg-orange-50 border border-orange-200 p-3 rounded-xl hover:bg-orange-100 transition group active:scale-95">
             <div class="flex items-center space-x-2.5">
               <span class="text-base">🍼</span>
               <div>
@@ -692,11 +676,11 @@
               <span class="block text-xs font-bold text-orange-600">95k - 120k</span>
               <span class="inline-block bg-orange-500 text-white font-bold text-[9px] px-2 py-1 rounded-lg mt-0.5">Xem Shop</span>
             </div>
-          </a>
+          </button>
 
           <!-- Món 3: Nhiệt kế thả chậu tắm -->
-          <a href="https://s.shopee.vn/8AWpiBMxzv" target="_blank" 
-             class="flex justify-between items-center bg-blue-50 border border-blue-200 p-3 rounded-xl hover:bg-blue-100 transition group">
+          <button onclick="openShopee(LINK_NHIET_TAM)" 
+             class="w-full text-left flex justify-between items-center bg-blue-50 border border-blue-200 p-3 rounded-xl hover:bg-blue-100 transition group active:scale-95">
             <div class="flex items-center space-x-2.5">
               <span class="text-base">🐥</span>
               <div>
@@ -708,7 +692,7 @@
               <span class="block text-xs font-bold text-blue-600">59.000đ</span>
               <span class="inline-block bg-blue-500 text-white font-bold text-[9px] px-2 py-1 rounded-lg mt-0.5">Xem Shop</span>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -722,15 +706,15 @@
 
   <!-- THANH BOTTOM NAV CỐ ĐỊNH -->
   <nav class="fixed bottom-2 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] max-w-md bg-white/95 backdrop-blur-md rounded-3xl p-2.5 shadow-md border border-rose-200 flex justify-around items-center z-50">
-    <button onclick="openShopee(LINK_GOI_OM)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-rose-600">
+    <button onclick="openShopee(LINK_GOI_OM)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-rose-600 active:scale-95 transition">
       <span class="text-base">🤰</span>
       <span>Mẹ Bầu</span>
     </button>
-    <button onclick="openShopee(LINK_GHE_AN)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-amber-600">
+    <button onclick="openShopee(LINK_GHE_AN)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-amber-600 active:scale-95 transition">
       <span class="text-base">🌱</span>
       <span>Nuôi Con</span>
     </button>
-    <button onclick="openShopee(LINK_NHIET_KE)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-teal-600">
+    <button onclick="openShopee(LINK_NHIET_KE)" class="flex flex-col items-center gap-0.5 text-[10px] font-bold text-teal-600 active:scale-95 transition">
       <span class="text-base">💉</span>
       <span>Lịch Tiêm</span>
     </button>
